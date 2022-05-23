@@ -1,0 +1,61 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>TransactionApp</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>TransactionApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="TransactionApp.csproj" File="TransactionApp.csproj" ReplaceParameters="true">
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AccountsController.cs">AccountsController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="WeatherForecastController.cs">WeatherForecastController.cs</ProjectItem>
+      </Folder>
+      <Folder Name="DAL" TargetFolderName="DAL">
+        <ProjectItem ReplaceParameters="true" TargetFileName="BankingDbContext.cs">BankingDbContext.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Migrations" TargetFolderName="Migrations">
+        <ProjectItem ReplaceParameters="true" TargetFileName="20220523065957_initalMigration.cs">20220523065957_initalMigration.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="20220523065957_initalMigration.Designer.cs">20220523065957_initalMigration.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="BankingDbContextModelSnapshot.cs">BankingDbContextModelSnapshot.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Models" TargetFolderName="Models">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Account.cs">Account.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="AuthentiateModel.cs">AuthentiateModel.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="GetAccountModel.cs">GetAccountModel.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="RegisterNewAccountModel.cs">RegisterNewAccountModel.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Response.cs">Response.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Transaction.cs">Transaction.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UpdateAccountModel.cs">UpdateAccountModel.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Profiles" TargetFolderName="Profiles">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AutomapperProfiles.cs">AutomapperProfiles.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services">
+        <Folder Name="Implementations" TargetFolderName="Implementations">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AccountService.cs">AccountService.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Interfaces" TargetFolderName="Interfaces">
+          <ProjectItem ReplaceParameters="true" TargetFileName="IAccountService.cs">IAccountService.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ITransactionService.cs">ITransactionService.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.Development.json">appsettings.Development.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="WeatherForecast.cs">WeatherForecast.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
