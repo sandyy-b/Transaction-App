@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
-namespace $safeprojectname$.Models
+namespace TransactionApp.Models
 {
     [Table("Accounts")]
     public class Account
@@ -18,7 +19,9 @@ namespace $safeprojectname$.Models
         public string AccountNumberGenerated { get; set; } // Account Number is generated here 
 
         // Hash and Salt of the Account Transaction pin is stored here
+        [JsonIgnore]
         public byte[] PinHash { get; set; }
+        [JsonIgnore]
         public byte[] pinSalt { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateLastUpdated { get; set; }
@@ -29,7 +32,7 @@ namespace $safeprojectname$.Models
         // Account Number generation (in a constructor)
         public Account()
         {
-            AccountNumberGenerated = Convert.ToString((long)rand.NextDouble() * 9_000_000_000L + 1_000_000_000L); // This is done
+            AccountNumberGenerated = Convert.ToString((long) Math.Floor(rand.NextDouble() * 9_000_000_000L + 1_000_000_000L)); // This is done
             // to create a random 10 digit Account Number.
 
             AccountName = $"{FirstName} {LastName}"; // Done to generate the complete Account Holder Name.

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace $safeprojectname$.Models
+namespace TransactionApp.Models
 {
     public class GetAccountModel
     {

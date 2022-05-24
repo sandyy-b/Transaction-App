@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using $safeprojectname$.Models;
+using TransactionApp.Models;
 
-namespace $safeprojectname$.Profiles
+namespace TransactionApp.Profiles
 {
     public class AutomapperProfiles : Profile
     {
@@ -10,6 +10,7 @@ namespace $safeprojectname$.Profiles
             CreateMap<RegisterNewAccountModel, Account>();
             CreateMap<UpdateAccountModel, Account>();
             CreateMap<Account, GetAccountModel>();
+            CreateMap<TransactionRequestDto, Transaction>();
         }
     }
 }

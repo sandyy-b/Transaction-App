@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.RegularExpressions;
-using $safeprojectname$.Models;
-using $safeprojectname$.Services;
+using TransactionApp.Models;
+using TransactionApp.Services;
 
-namespace $safeprojectname$.Controllers
+namespace TransactionApp.Controllers
 {
     [ApiController]
     [Route("api/v3/controller")]

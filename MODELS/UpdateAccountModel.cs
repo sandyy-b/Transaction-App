@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace $safeprojectname$.Models
+namespace TransactionApp.Models
 {
     public class UpdateAccountModel
     {
@@ -10,7 +10,7 @@ namespace $safeprojectname$.Models
         public string Email { get; set; }
 
         [Required]
-        [RegularExpression(@"^[0-9]/d{4}$", ErrorMessage = "Pin should not be more than 4-digits")] // It should be a 4-digit string
+        [RegularExpression(@"^[0-9]{4}$", ErrorMessage = "Pin should not be more than 4-digits")] // It should be a 4-digit string
         public string Pin { get; set; }
 
         [Required]

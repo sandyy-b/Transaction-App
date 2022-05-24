@@ -1,4 +1,4 @@
-﻿namespace $safeprojectname$.Models
+﻿namespace TransactionApp.Models
 {
     public class Response
     {

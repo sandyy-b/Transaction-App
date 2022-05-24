@@ -1,8 +1,8 @@
 ﻿using System.Text;
-using $safeprojectname$.DAL;
-using $safeprojectname$.Models;
+using TransactionApp.DAL;
+using TransactionApp.Models;
 
-namespace $safeprojectname$.Services.Implementations
+namespace TransactionApp.Services.Implementations
 {
     public class AccountService : IAccountService
     {

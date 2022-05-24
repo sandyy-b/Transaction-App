@@ -1,10 +1,14 @@
+using FluentAssertions.Common;
 using Microsoft.EntityFrameworkCore;
-using $safeprojectname$.DAL;
-using $safeprojectname$.Services;
-using $safeprojectname$.Services.Implementations;
+using TransactionApp.DAL;
+using TransactionApp.Services;
+using TransactionApp.Services.Implementations;
+using TransactionApp.Services.Interfaces;
+using TransactionApp.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
-
+ConfigurationManager configuration = builder.Configuration;
+IWebHostEnvironment environment = builder.Environment;
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -17,7 +21,9 @@ builder.Services.AddDbContext<BankingDbContext>(x =>
 
 });
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<ITransactionService, TransactionService>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.Configure<AppSettings>(configuration.GetSection("AppSettings"));
 builder.Services.AddSwaggerGen(x =>
 {
     x.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace $safeprojectname$.Controllers
+namespace TransactionApp.Controllers
 {
     [ApiController]
     [Route("[controller]")]

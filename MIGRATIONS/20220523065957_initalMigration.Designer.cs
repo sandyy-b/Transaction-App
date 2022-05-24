@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using $safeprojectname$.DAL;
+using TransactionApp.DAL;
 
 #nullable disable
 
-namespace $safeprojectname$.Migrations
+namespace TransactionApp.Migrations
 {
     [DbContext(typeof(BankingDbContext))]
     [Migration("20220523065957_initalMigration")]
@@ -24,7 +24,7 @@ namespace $safeprojectname$.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("$safeprojectname$.Models.Account", b =>
+            modelBuilder.Entity("TransactionApp.Models.Account", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -81,7 +81,7 @@ namespace $safeprojectname$.Migrations
                     b.ToTable("Accounts");
                 });
 
-            modelBuilder.Entity("$safeprojectname$.Models.Transaction", b =>
+            modelBuilder.Entity("TransactionApp.Models.Transaction", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

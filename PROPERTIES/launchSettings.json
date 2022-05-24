@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "$safeprojectname$": {
+    "TransactionApp": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

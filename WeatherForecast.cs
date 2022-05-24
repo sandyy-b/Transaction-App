@@ -1,4 +1,4 @@
-namespace $safeprojectname$
+namespace TransactionApp
 {
     public class WeatherForecast
     {

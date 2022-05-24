@@ -1,6 +1,6 @@
-﻿using $safeprojectname$.Models;
+﻿using TransactionApp.Models;
 
-namespace $safeprojectname$.Services.Interfaces
+namespace TransactionApp.Services.Interfaces
 {
     public interface ITransactionService
     {

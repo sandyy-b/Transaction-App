@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using $safeprojectname$.Models;
+using TransactionApp.Models;
 
-namespace $safeprojectname$.DAL
+namespace TransactionApp.DAL
 {
     public class BankingDbContext : DbContext
     {
